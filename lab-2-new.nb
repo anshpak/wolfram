@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     48010,        925]
-NotebookOptionsPosition[     41436,        803]
-NotebookOutlinePosition[     46044,        891]
-CellTagsIndexPosition[     46001,        888]
+NotebookDataLength[     64419,       1324]
+NotebookOptionsPosition[     56145,       1176]
+NotebookOutlinePosition[     60753,       1264]
+CellTagsIndexPosition[     60710,       1261]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -174,7 +174,7 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`t$$ = 14.71441589586034, Typeset`show$$ = 
+   DynamicModuleBox[{$CellContext`t$$ = 15.782843102002616`, Typeset`show$$ = 
     True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
@@ -286,7 +286,380 @@ Cell[TextData[{
  CellChangeTimes->{{3.8554113412251506`*^9, 3.85541138598617*^9}, {
   3.857369436461569*^9, 
   3.857369469432828*^9}},ExpressionUUID->"74f1e32b-e129-4dab-9c67-\
-9cc00c7f7d1b"]
+9cc00c7f7d1b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   StyleBox[
+    RowBox[{
+     RowBox[{
+     "\:041d\:0435", " ", "\:043f\:043e\:043c\:043d\:044e", " ", "\:0438", 
+      " ", "\:043d\:0435", " ", 
+      "\:043f\:043e\:043d\:0438\:043c\:0430\:044e"}], ",", " ", 
+     RowBox[{
+     "\:043f\:043e\:0447\:0435\:043c\:0443", " ", "\:044f", " ", 
+      "\:0442\:0443\:0442", " ", "\:0434\:043e\:0431\:0430\:0432\:0438\:043b",
+       " ", "\:0442\:0430\:043a\:043e\:0439", " ", 
+      "\:043f\:0430\:0442\:0442\:0435\:0440\:043d", " ", 
+      RowBox[{
+       StyleBox["p_",
+        FontFamily->"Courier New",
+        FontWeight->"Normal",
+        FontSlant->"Italic"], ":"}]}]}],
+    FontWeight->"Bold",
+    FontColor->RGBColor[1., 0., 0.]], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SophieGermainPrime", "[", "n_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"DeleteCases", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prime", "[", "#", "]"}], "&"}], "/@", 
+       RowBox[{"Range", "[", 
+        RowBox[{"1", ",", 
+         RowBox[{"n", "*", "10"}]}], "]"}]}], ",", 
+      RowBox[{"p_", "/;", 
+       RowBox[{"!", 
+        RowBox[{"PrimeQ", "[", 
+         RowBox[{
+          RowBox[{"2", "*", "p"}], "+", "1"}], "]"}]}]}]}], "]"}], "[", 
+    RowBox[{"[", "n", "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.857370914498107*^9, 3.8573710326360965`*^9}, 
+   3.857371484768011*^9, {3.8573723259873767`*^9, 3.857372355697472*^9}, 
+   3.857372446830556*^9},
+ CellLabel->"In[24]:=",ExpressionUUID->"eed5f47b-b26d-438c-a849-328a2eb22134"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:041f\:0440\:043e\:0432\:0435\:0440\:044f\:044e", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SophieGermainPrime", "[", "1", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"SophieGermainPrime", "[", "2", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"SophieGermainPrime", "[", "3", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"SophieGermainPrime", "[", "10", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"SophieGermainPrime", "[", "35", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"SophieGermainPrime", "[", "52", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8573714295330606`*^9, 3.857371467475181*^9}, {
+  3.857372448376511*^9, 3.857372451438826*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"2cee6a16-be1d-489a-a64b-3766bed72c45"],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{{3.8573714690367594`*^9, 3.8573714880635653`*^9}, 
+   3.857372454796895*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"d11a0521-a454-4893-8853-7f447eca49e0"],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{{3.8573714690367594`*^9, 3.8573714880635653`*^9}, 
+   3.857372454812546*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"7bf0530b-e2eb-47b7-aacd-5ac8ebb40613"],
+
+Cell[BoxData["5"], "Output",
+ CellChangeTimes->{{3.8573714690367594`*^9, 3.8573714880635653`*^9}, 
+   3.8573724548281326`*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"be283916-326d-4ae4-a1c4-42e4039b690d"],
+
+Cell[BoxData["89"], "Output",
+ CellChangeTimes->{{3.8573714690367594`*^9, 3.8573714880635653`*^9}, 
+   3.857372454843754*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"20d7c130-c07a-43f1-ab6e-202be3e2668a"],
+
+Cell[BoxData["809"], "Output",
+ CellChangeTimes->{{3.8573714690367594`*^9, 3.8573714880635653`*^9}, 
+   3.857372454859376*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"2c70418f-abce-4422-95ba-abf548e4b154"],
+
+Cell[BoxData["1559"], "Output",
+ CellChangeTimes->{{3.8573714690367594`*^9, 3.8573714880635653`*^9}, 
+   3.8573724548750334`*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"f4b2581e-08ba-4c09-952b-bc4b587c0817"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "\:0421\:043f\:0438\:0441\:043e\:043a", " ", "\:0438\:0437", " ", 
+     "\:043f\:0440\:043e\:0441\:0442\:044b\:0445", " ", 
+     "\:0421\:043e\:0444\:0438"}], "-", 
+    "\:0416\:0435\:0440\:043c\:0435\:043d"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"SophieGermainPrime", "[", "#", "]"}], "&"}], "/@", 
+     RowBox[{"Range", "[", 
+      RowBox[{"1", ",", "a"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "100"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.857371569943616*^9, 3.8573716447447824`*^9}, 
+   3.857372458156004*^9},
+ CellLabel->"In[31]:=",ExpressionUUID->"c54f1288-9e20-461b-a26f-cc8e7c05f23c"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 1, 100}}, Typeset`size$$ = {
+    22.74999933242798, {2.405761648155748, 9.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Map[$CellContext`SophieGermainPrime[#]& , 
+        Range[1, $CellContext`a$$]], 
+      "Specifications" :> {{$CellContext`a$$, 1, 100}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{293., {36.13403328722343, 41.86596671277657}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.857371648727722*^9, 3.8573724592021055`*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"e20f9caf-79ba-45fa-8c35-485dd3234859"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "\:0421\:043f\:0438\:0441\:043e\:043a", " ", "\:0438\:0437", " ", 
+     "\:043f\:0440\:043e\:0441\:0442\:044b\:0445", " ", 
+     "\:0421\:043e\:0444\:0438"}], "-", 
+    RowBox[{
+    "\:0416\:0435\:0440\:043c\:0435\:043d", " ", 
+     "\:043c\:0430\:0442\:0440\:0438\:0446\:0435\:0439"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"MatrixForm", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"#", ",", 
+         RowBox[{"SophieGermainPrime", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"1", ",", "a"}], "]"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "1", ",", "5", ",", "10", ",", "20", ",", "30", ",", "40", ",", "50", 
+        ",", "100"}], "}"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8573716697227807`*^9, 3.8573717792758255`*^9}, 
+   3.857372462275611*^9},
+ CellLabel->"In[32]:=",ExpressionUUID->"be65b47f-a77f-4a3c-bbfa-c63443ce726c"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 20, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], {1, 5, 10, 20, 30, 40, 50, 100}}}, 
+    Typeset`size$$ = {
+    66.60253860466182, {166.53403328722337`, 172.26596671277653`}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> MatrixForm[
+        Map[{#, 
+          $CellContext`SophieGermainPrime[#]}& , 
+         Range[1, $CellContext`a$$]]], 
+      "Specifications" :> {{$CellContext`a$$, {1, 5, 10, 20, 30, 40, 50, 
+         100}}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{161., {198.13403328722342`, 203.86596671277658`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.8573717851802053`*^9, 3.857372463805977*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"fe42c224-6a6c-4a74-9ae1-bbb57a63399f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Grid", " ", "-", " ", "\:0441\:0435\:0442\:043a\:0430"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Flatten", " ", "\:0443\:0431\:0438\:0440\:0430\:0435\:0442", " ", 
+    "\:0432\:043b\:043e\:0436\:0435\:043d\:043d\:043e\:0441\:0442\:044c"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   StyleBox[
+    RowBox[{
+    "\:041a\:0430\:043a", " ", "Flatten", " ", 
+     "\:0443\:0431\:0438\:0440\:0430\:0435\:0442", " ", 
+     "\:0432\:043b\:043e\:0436\:0435\:043d\:043d\:043e\:0441\:0442\:044c", 
+     " ", "\:0441\:043f\:0438\:0441\:043a\:043e\:0432", " ", "\:0432", " ", 
+     "\:044d\:0442\:043e\:043c", " ", 
+     RowBox[{"\:0432\:044b\:0440\:0430\:0436\:0435\:043d\:0438\:0438", ":"}]}],
+    FontWeight->"Bold",
+    FontColor->RGBColor[1., 0., 0.]], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{"{", 
+       RowBox[{"#", ",", 
+        RowBox[{"Timing", "[", 
+         RowBox[{"SophieGermainPrime", "[", "#", "]"}], "]"}]}], "}"}], "]"}],
+      "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "a"}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.8573718084181924`*^9, 3.857371945762309*^9}, 
+   3.8573724711636386`*^9},
+ CellLabel->"In[33]:=",ExpressionUUID->"43c18cbc-a757-41be-a53e-bd490545a606"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0.`", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "0.`", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "0.`", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "0.`", ",", "11"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "0.`", ",", "23"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.857371940751501*^9, 3.8573719474957857`*^9}, 
+   3.8573724727101507`*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"c98f3a04-925a-4a2b-ba90-fa620c8d9a98"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"\"\<N\>\"", ",", "\"\<Time\>\"", ",", "\"\<SG Prime\>\""}], 
+         "}"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Flatten", "[", 
+          RowBox[{"{", 
+           RowBox[{"#", ",", 
+            RowBox[{"Timing", "[", 
+             RowBox[{"SophieGermainPrime", "[", "#", "]"}], "]"}]}], "}"}], 
+          "]"}], "&"}], "/@", 
+        RowBox[{"Range", "[", 
+         RowBox[{"1", ",", "a"}], "]"}]}]}], "]"}], ",", 
+     RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+     RowBox[{"Background", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Hue", "[", 
+          RowBox[{"0.16", ",", "0.7", ",", "0.86"}], "]"}], ",", 
+         RowBox[{"Hue", "[", 
+          RowBox[{"0.13", ",", "0.8", ",", "0.83"}], "]"}], ",", 
+         RowBox[{"Hue", "[", 
+          RowBox[{"0.1", ",", "0.88", ",", "0.84"}], "]"}]}], "}"}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "5", ",", "10", ",", "15", ",", "20", ",", "25", ",", "30", ",", "35"}],
+       "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.857371975224191*^9, 3.857372223025285*^9}, {
+   3.857372260331376*^9, 3.8573722827948723`*^9}, 3.8573724785056667`*^9},
+ CellLabel->"In[35]:=",ExpressionUUID->"4db78f1a-4610-434d-ab17-0c88aa4cd9df"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 20, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], {5, 10, 15, 20, 25, 30, 35}}}, 
+    Typeset`size$$ = {120., {188.73403328722335`, 194.46596671277652`}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 5}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Grid[
+        Join[{{"N", "Time", "SG Prime"}}, 
+         Map[Flatten[{#, 
+            Timing[
+             $CellContext`SophieGermainPrime[#]]}]& , 
+          Range[1, $CellContext`a$$]]], Frame -> All, Background -> {{
+           Hue[0.16, 0.7, 0.86], 
+           Hue[0.13, 0.8, 0.83], 
+           Hue[0.1, 0.88, 0.84]}}], 
+      "Specifications" :> {{$CellContext`a$$, {5, 10, 15, 20, 25, 30, 35}}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{209., {220.13403328722342`, 225.86596671277658`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.8573722248370304`*^9, {3.8573722677822714`*^9, 3.8573722946197424`*^9}, 
+   3.8573724795679216`*^9},
+ CellLabel->"Out[35]=",ExpressionUUID->"2de7f533-7d20-40e6-9fdb-d5756cbf9eb2"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -906,24 +1279,50 @@ Cell[4565, 112, 569, 15, 28, "Input",ExpressionUUID->"dfc673db-c056-4ed2-be19-33
 Cell[5137, 129, 569, 16, 28, "Input",ExpressionUUID->"2546ad61-e14e-42db-add0-0d5e1ce7b7d9"],
 Cell[CellGroupData[{
 Cell[5731, 149, 832, 22, 28, "Input",ExpressionUUID->"42eaa87f-bb80-47f4-93fd-92e66c02c416"],
-Cell[6566, 173, 2105, 41, 175, "Output",ExpressionUUID->"438733b8-9f18-486b-a173-b94a396fc91d"]
+Cell[6566, 173, 2107, 41, 175, "Output",ExpressionUUID->"438733b8-9f18-486b-a173-b94a396fc91d"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8720, 220, 150, 3, 54, "Subsection",ExpressionUUID->"ad73d942-56bc-435e-a50e-d7cfd638c154"],
-Cell[8873, 225, 1122, 25, 58, "Text",ExpressionUUID->"39527c98-63fc-4121-9219-595b40a98231"]
+Cell[8722, 220, 150, 3, 54, "Subsection",ExpressionUUID->"ad73d942-56bc-435e-a50e-d7cfd638c154"],
+Cell[8875, 225, 1122, 25, 58, "Text",ExpressionUUID->"39527c98-63fc-4121-9219-595b40a98231"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10044, 256, 322, 6, 67, "Section",ExpressionUUID->"7b292983-701d-4fd5-abd0-09752aa42ce1"],
+Cell[10046, 256, 322, 6, 67, "Section",ExpressionUUID->"7b292983-701d-4fd5-abd0-09752aa42ce1"],
 Cell[CellGroupData[{
-Cell[10391, 266, 153, 3, 54, "Subsection",ExpressionUUID->"1e5e4f91-0440-41eb-8e4b-76bd39c7e00a"],
-Cell[10547, 271, 960, 17, 35, "Text",ExpressionUUID->"74f1e32b-e129-4dab-9c67-9cc00c7f7d1b"]
+Cell[10393, 266, 153, 3, 54, "Subsection",ExpressionUUID->"1e5e4f91-0440-41eb-8e4b-76bd39c7e00a"],
+Cell[10549, 271, 960, 17, 35, "Text",ExpressionUUID->"74f1e32b-e129-4dab-9c67-9cc00c7f7d1b"],
+Cell[11512, 290, 1552, 41, 48, "Input",ExpressionUUID->"eed5f47b-b26d-438c-a849-328a2eb22134"],
+Cell[CellGroupData[{
+Cell[13089, 335, 770, 13, 143, "Input",ExpressionUUID->"2cee6a16-be1d-489a-a64b-3766bed72c45"],
+Cell[13862, 350, 203, 3, 32, "Output",ExpressionUUID->"d11a0521-a454-4893-8853-7f447eca49e0"],
+Cell[14068, 355, 203, 3, 32, "Output",ExpressionUUID->"7bf0530b-e2eb-47b7-aacd-5ac8ebb40613"],
+Cell[14274, 360, 205, 3, 32, "Output",ExpressionUUID->"be283916-326d-4ae4-a1c4-42e4039b690d"],
+Cell[14482, 365, 204, 3, 32, "Output",ExpressionUUID->"20d7c130-c07a-43f1-ab6e-202be3e2668a"],
+Cell[14689, 370, 205, 3, 32, "Output",ExpressionUUID->"2c70418f-abce-4422-95ba-abf548e4b154"],
+Cell[14897, 375, 208, 3, 32, "Output",ExpressionUUID->"f4b2581e-08ba-4c09-952b-bc4b587c0817"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11544, 293, 150, 3, 54, "Subsection",ExpressionUUID->"c05c051e-64d6-432f-9ac8-6754ddaac3a7"],
-Cell[11697, 298, 2265, 43, 81, "Text",ExpressionUUID->"ed0d9686-9bc1-4387-bbe9-c5d9ae0c6d98"],
-Cell[13965, 343, 27431, 455, 448, "Input",ExpressionUUID->"7c6e5534-ca77-47bf-8b04-ebe86718e1b6"]
+Cell[15142, 383, 783, 20, 48, "Input",ExpressionUUID->"c54f1288-9e20-461b-a26f-cc8e7c05f23c"],
+Cell[15928, 405, 1683, 34, 97, "Output",ExpressionUUID->"e20f9caf-79ba-45fa-8c35-485dd3234859"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17648, 444, 1096, 30, 48, "Input",ExpressionUUID->"be65b47f-a77f-4a3c-bbfa-c63443ce726c"],
+Cell[18747, 476, 1796, 36, 421, "Output",ExpressionUUID->"fe42c224-6a6c-4a74-9ae1-bbb57a63399f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20580, 517, 1441, 36, 105, "Input",ExpressionUUID->"43c18cbc-a757-41be-a53e-bd490545a606"],
+Cell[22024, 555, 585, 15, 32, "Output",ExpressionUUID->"c98f3a04-925a-4a2b-ba90-fa620c8d9a98"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22646, 575, 1522, 41, 48, "Input",ExpressionUUID->"4db78f1a-4610-434d-ab17-0c88aa4cd9df"],
+Cell[24171, 618, 2033, 42, 488, "Output",ExpressionUUID->"2de7f533-7d20-40e6-9fdb-d5756cbf9eb2"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26253, 666, 150, 3, 54, "Subsection",ExpressionUUID->"c05c051e-64d6-432f-9ac8-6754ddaac3a7"],
+Cell[26406, 671, 2265, 43, 81, "Text",ExpressionUUID->"ed0d9686-9bc1-4387-bbe9-c5d9ae0c6d98"],
+Cell[28674, 716, 27431, 455, 448, "Input",ExpressionUUID->"7c6e5534-ca77-47bf-8b04-ebe86718e1b6"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
