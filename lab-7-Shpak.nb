@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    139877,       2554]
-NotebookOptionsPosition[    134635,       2456]
-NotebookOutlinePosition[    136830,       2504]
-CellTagsIndexPosition[    136787,       2501]
+NotebookDataLength[    144568,       2649]
+NotebookOptionsPosition[    139130,       2549]
+NotebookOutlinePosition[    141325,       2597]
+CellTagsIndexPosition[    141282,       2594]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -281,15 +281,24 @@ Cell[BoxData[
   3.862658217776147*^9, 3.8626582201432204`*^9}, {3.8626585044040127`*^9, 
   3.8626585576783376`*^9}, {3.8626589052138157`*^9, 3.8626589557599297`*^9}, {
   3.862659409811726*^9, 3.862659419326288*^9}},
- CellLabel->"In[3]:=",ExpressionUUID->"f37e6e32-6508-4ef4-a3a6-cd741f9cfd6e"],
+ CellLabel->"In[4]:=",ExpressionUUID->"f37e6e32-6508-4ef4-a3a6-cd741f9cfd6e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.8632791297557173`*^9, 3.8632791348755646`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"3c0f6711-4424-43e5-8581-e20e7cf198e0"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"s", "=", 
   RowBox[{"OpenWrite", "[", "\"\<logs.txt\>\"", "]"}]}]], "Input",
- CellChangeTimes->{{3.863277473748931*^9, 3.863277500191359*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"31b3dace-6aa8-4dae-af1c-32ec378ea4e1"],
+ CellChangeTimes->{{3.863277473748931*^9, 3.863277500191359*^9}, {
+  3.8632789464681077`*^9, 3.8632789776252837`*^9}, {3.863279126540586*^9, 
+  3.863279127725241*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"31b3dace-6aa8-4dae-af1c-32ec378ea4e1"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -643,8 +652,12 @@ Cell[BoxData[
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellChangeTimes->{3.8632775159725304`*^9, 3.8632779499839582`*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"cdbbd788-3b39-4237-a783-9e71d009a204"]
+ CellChangeTimes->{
+  3.8632775159725304`*^9, 3.8632779499839582`*^9, 3.8632785213871183`*^9, 
+   3.8632785936638126`*^9, 3.863278759164091*^9, {3.863278936876649*^9, 
+   3.8632790247074585`*^9}, {3.8632791215574203`*^9, 3.863279138685134*^9}, 
+   3.8632792084435797`*^9, 3.8632798773517594`*^9, 3.8632801192309957`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"f926b0c6-c18c-488f-944d-ef00a2b2e83c"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -661,52 +674,84 @@ Cell[BoxData[
      RowBox[{"a", "=", "True"}]}], "}"}], ",", "\[IndentingNewLine]", 
    RowBox[{"Grid", "[", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"{", 
       RowBox[{
+       RowBox[{
+        RowBox[{"WriteLine", "[", 
+         RowBox[{"s", ",", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{
+            RowBox[{"DateString", "[", "Now", "]"}], ",", 
+            "\"\<. Game has started\>\""}], "]"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Button", "[", 
+           RowBox[{"\"\<Up\>\"", ",", 
+            RowBox[{
+             RowBox[{"AppendTo", "[", 
+              RowBox[{"pointlist", ",", 
+               RowBox[{
+                RowBox[{"Last", "[", "pointlist", "]"}], "+", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "1"}], "}"}]}]}], "]"}], ";", 
+             RowBox[{"WriteLine", "[", 
+              RowBox[{"s", ",", 
+               RowBox[{"StringJoin", "[", 
+                RowBox[{
+                 RowBox[{"DateString", "[", "Now", "]"}], ",", 
+                 "\"\<. One step up\>\""}], "]"}]}], "]"}]}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Button", "[", 
+           RowBox[{"\"\<Down\>\"", ",", 
+            RowBox[{
+             RowBox[{"AppendTo", "[", 
+              RowBox[{"pointlist", ",", 
+               RowBox[{
+                RowBox[{"Last", "[", "pointlist", "]"}], "+", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", 
+                  RowBox[{"-", "1"}]}], "}"}]}]}], "]"}], ";", 
+             RowBox[{"WriteLine", "[", 
+              RowBox[{"s", ",", 
+               RowBox[{"StringJoin", "[", 
+                RowBox[{
+                 RowBox[{"DateString", "[", "Now", "]"}], ",", 
+                 "\"\<. One step down\>\""}], "]"}]}], "]"}]}]}], "]"}]}], 
+         "}"}]}], ",", "\[IndentingNewLine]", 
        RowBox[{"{", 
         RowBox[{
          RowBox[{"Button", "[", 
-          RowBox[{"\"\<Up\>\"", ",", 
+          RowBox[{"\"\<Left\>\"", ",", 
            RowBox[{
             RowBox[{"AppendTo", "[", 
              RowBox[{"pointlist", ",", 
               RowBox[{
                RowBox[{"Last", "[", "pointlist", "]"}], "+", 
                RowBox[{"{", 
-                RowBox[{"0", ",", "1"}], "}"}]}]}], "]"}], ";", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "0"}], "}"}]}]}], "]"}], ";", 
             RowBox[{"WriteLine", "[", 
-             RowBox[{"s", ",", "\"\<One step up\>\""}], "]"}]}]}], "]"}], ",",
-          "\[IndentingNewLine]", 
-         RowBox[{"Button", "[", 
-          RowBox[{"\"\<Down\>\"", ",", 
-           RowBox[{"AppendTo", "[", 
-            RowBox[{"pointlist", ",", 
-             RowBox[{
-              RowBox[{"Last", "[", "pointlist", "]"}], "+", 
-              RowBox[{"{", 
-               RowBox[{"0", ",", 
-                RowBox[{"-", "1"}]}], "}"}]}]}], "]"}]}], "]"}]}], "}"}], ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"Button", "[", 
-          RowBox[{"\"\<Left\>\"", ",", 
-           RowBox[{"AppendTo", "[", 
-            RowBox[{"pointlist", ",", 
-             RowBox[{
-              RowBox[{"Last", "[", "pointlist", "]"}], "+", 
-              RowBox[{"{", 
+             RowBox[{"s", ",", 
+              RowBox[{"StringJoin", "[", 
                RowBox[{
-                RowBox[{"-", "1"}], ",", "0"}], "}"}]}]}], "]"}]}], "]"}], 
-         ",", 
+                RowBox[{"DateString", "[", "Now", "]"}], ",", 
+                "\"\<. One step left\>\""}], "]"}]}], "]"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
          RowBox[{"Button", "[", 
           RowBox[{"\"\<Rigth\>\"", ",", 
-           RowBox[{"AppendTo", "[", 
-            RowBox[{"pointlist", ",", 
-             RowBox[{
-              RowBox[{"Last", "[", "pointlist", "]"}], "+", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "0"}], "}"}]}]}], "]"}]}], "]"}]}], "}"}], 
-       ",", 
+           RowBox[{
+            RowBox[{"AppendTo", "[", 
+             RowBox[{"pointlist", ",", 
+              RowBox[{
+               RowBox[{"Last", "[", "pointlist", "]"}], "+", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "0"}], "}"}]}]}], "]"}], ";", 
+            RowBox[{"WriteLine", "[", 
+             RowBox[{"s", ",", 
+              RowBox[{"StringJoin", "[", 
+               RowBox[{"DateString", ",", "\"\<. One step right\>\""}], 
+               "]"}]}], "]"}]}]}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
        RowBox[{"{", 
         RowBox[{
          RowBox[{"Button", "[", 
@@ -812,12 +857,19 @@ Cell[BoxData[
                     RowBox[{"Length", "[", "pointlist", "]"}], ",", "1"}], 
                     "]"}], "]"}], "<=", "20"}]}], "]"}], ",", 
                 RowBox[{"{", 
-                 RowBox[{"Text", "[", 
-                  RowBox[{
-                   RowBox[{"Style", "[", 
+                 RowBox[{
+                  RowBox[{"Text", "[", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
                     RowBox[{"\"\<End of game\>\"", ",", "24"}], "]"}], ",", 
-                   RowBox[{"{", 
-                    RowBox[{"10", ",", "10"}], "}"}]}], "]"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"10", ",", "10"}], "}"}]}], "]"}], ";", 
+                  RowBox[{"WriteLine", "[", 
+                   RowBox[{"s", ",", 
+                    RowBox[{"StringJoin", "[", 
+                    RowBox[{
+                    RowBox[{"DateString", "[", "Now", "]"}], ",", 
+                    "\"\<. Game over\>\""}], "]"}]}], "]"}]}], "}"}], ",", 
                 "Nothing"}], "]"}], ",", "\[IndentingNewLine]", 
               RowBox[{"If", "[", 
                RowBox[{
@@ -852,12 +904,19 @@ Cell[BoxData[
                 RowBox[{
                  RowBox[{"isDeadEnd", "[", "pointlist", "]"}], "==", "True"}],
                  ",", 
-                RowBox[{"Text", "[", 
-                 RowBox[{
-                  RowBox[{"Style", "[", 
-                   RowBox[{"\"\<End of game\>\"", ",", "24"}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{"10", ",", "10"}], "}"}]}], "]"}], ",", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
+                    RowBox[{"\"\<End of game\>\"", ",", "24"}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"10", ",", "10"}], "}"}]}], "]"}], ";", 
+                 RowBox[{"WriteLine", "[", 
+                  RowBox[{"s", ",", 
+                   RowBox[{"StringJoin", "[", 
+                    RowBox[{
+                    RowBox[{"DateString", "[", "Now", "]"}], ",", 
+                    "\"\<. Game over\>\""}], "]"}]}], "]"}]}], ",", 
                 "Nothing"}], "]"}], ",", "\[IndentingNewLine]", 
               RowBox[{"Line", "[", "pointlist", "]"}], ",", 
               "\[IndentingNewLine]", 
@@ -932,12 +991,29 @@ Cell[BoxData[
    3.8626591121392097`*^9}, {3.862659354780478*^9, 3.86265936371183*^9}, 
    3.863276885986144*^9, 3.8632769191046996`*^9, {3.863277032906602*^9, 
    3.863277057625599*^9}, {3.8632773869859056`*^9, 3.863277417244928*^9}, {
-   3.86327752112757*^9, 3.86327754176334*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"e6d9d151-da09-47eb-b75b-6405d8a19a47"],
+   3.86327752112757*^9, 3.86327754176334*^9}, {3.8632782374612494`*^9, 
+   3.863278285009019*^9}, {3.863278472712739*^9, 3.86327856240947*^9}, {
+   3.863278633165512*^9, 3.8632786807555857`*^9}, {3.863279969932911*^9, 
+   3.863279999488952*^9}, {3.8632800665205326`*^9, 3.8632801130298586`*^9}, {
+   3.8632801821706333`*^9, 3.863280350763837*^9}, {3.8632817878069305`*^9, 
+   3.8632817895559673`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"e6d9d151-da09-47eb-b75b-6405d8a19a47"],
 
 Cell[BoxData[
- DynamicModuleBox[{$CellContext`pointlist$$ = {{10, 10}, {10, 11}, {10, 12}, {
-  10, 13}, {10, 14}, {10, 15}}, $CellContext`a$$ = True}, 
+ TemplateBox[{
+  "WriteString", "openx", 
+   "\"\\!\\(\\*RowBox[{\\\"OutputStream\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"logs.txt\\\\\\\"\\\", \\\",\\\", \\\"3\\\"}], \\\"]\\\"}]\
+\\) is not open.\"", 2, 14, 1, 31040605137331660846, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.863281792512477*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"e6df996f-0161-42c9-8acf-5106915e9b93"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`pointlist$$ = {{10, 10}}, $CellContext`a$$ = 
+  True}, 
   TagBox[GridBox[{
      {
       ButtonBox["\<\"Up\"\>",
@@ -945,29 +1021,32 @@ Cell[BoxData[
        ButtonFunction:>(
         AppendTo[$CellContext`pointlist$$, 
           Last[$CellContext`pointlist$$] + {0, 1}]; 
-        WriteLine[$CellContext`s, "One step up"]),
+        WriteLine[$CellContext`s, DateString[Now] <> ". One step up"]),
        Evaluator->Automatic,
        Method->"Preemptive"], 
       ButtonBox["\<\"Down\"\>",
        Appearance->Automatic,
-       ButtonFunction:>
+       ButtonFunction:>(
         AppendTo[$CellContext`pointlist$$, 
-         Last[$CellContext`pointlist$$] + {0, -1}],
+          Last[$CellContext`pointlist$$] + {0, -1}]; 
+        WriteLine[$CellContext`s, DateString[Now] <> ". One step down"]),
        Evaluator->Automatic,
        Method->"Preemptive"]},
      {
       ButtonBox["\<\"Left\"\>",
        Appearance->Automatic,
-       ButtonFunction:>
+       ButtonFunction:>(
         AppendTo[$CellContext`pointlist$$, 
-         Last[$CellContext`pointlist$$] + {-1, 0}],
+          Last[$CellContext`pointlist$$] + {-1, 0}]; 
+        WriteLine[$CellContext`s, DateString[Now] <> ". One step left"]),
        Evaluator->Automatic,
        Method->"Preemptive"], 
       ButtonBox["\<\"Rigth\"\>",
        Appearance->Automatic,
-       ButtonFunction:>
+       ButtonFunction:>(
         AppendTo[$CellContext`pointlist$$, 
-         Last[$CellContext`pointlist$$] + {1, 0}],
+          Last[$CellContext`pointlist$$] + {1, 0}]; 
+        WriteLine[$CellContext`s, DateString <> ". One step right"]),
        Evaluator->Automatic,
        Method->"Preemptive"]},
      {
@@ -1010,9 +1089,10 @@ Cell[BoxData[
             Part[$CellContext`pointlist$$, 
               Length[$CellContext`pointlist$$], 2] >= 15, 
             Part[$CellContext`pointlist$$, 
-              Length[$CellContext`pointlist$$], 1] <= 20], {
-            Text[
-             Style["End of game", 24], {10, 10}]}, Nothing], 
+              Length[$CellContext`pointlist$$], 1] <= 20], {Text[
+              Style["End of game", 24], {10, 10}]; 
+            WriteLine[$CellContext`s, DateString[Now] <> ". Game over"]}, 
+           Nothing], 
           If[
            MemberQ[
             
@@ -1024,9 +1104,10 @@ Cell[BoxData[
              Length[$CellContext`pointlist$$], 2] < 
            0, $CellContext`pointlist$$ = Drop[$CellContext`pointlist$$, -1], 
            Nothing], 
-          If[$CellContext`isDeadEnd[$CellContext`pointlist$$] == True, 
-           Text[
-            Style["End of game", 24], {10, 10}], Nothing], 
+          If[$CellContext`isDeadEnd[$CellContext`pointlist$$] == True, Text[
+             Style["End of game", 24], {10, 10}]; 
+           WriteLine[$CellContext`s, DateString[Now] <> ". Game over"], 
+           Nothing], 
           Line[$CellContext`pointlist$$], 
           Rectangle[{0, 15}, {5, 20}]}, ImageSize -> 300, GridLines -> {
            Range[1, 20], 
@@ -1039,22 +1120,34 @@ Cell[BoxData[
    "Grid"],
   DynamicModuleValues:>{}]], "Output",
  CellChangeTimes->{
-  3.8632775421694555`*^9, {3.8632779531550894`*^9, 3.8632779607939167`*^9}},
- CellLabel->"Out[4]=",ExpressionUUID->"4eb40a1d-f75c-4b39-aec8-9aae659a35de"]
+  3.8632775421694555`*^9, {3.8632779531550894`*^9, 3.8632779607939167`*^9}, {
+   3.8632785127797594`*^9, 3.8632785654394784`*^9}, 3.863278596631834*^9, 
+   3.863278761460422*^9, {3.863279211708435*^9, 3.8632792237314796`*^9}, 
+   3.8632798795856047`*^9, 3.863280121824136*^9, 3.8632817925593414`*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"04e4b8db-e657-4696-9986-86e3c94fec44"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"Close", "@", "s"}]], "Input",
- CellChangeTimes->{{3.863277506744352*^9, 3.863277510322154*^9}},
- CellLabel->
-  "In[199]:=",ExpressionUUID->"a5bb3a5b-2b40-4dad-a4f2-503397b5506b"],
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"WriteLine", "[", 
+   RowBox[{"s", ",", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{
+      RowBox[{"DateString", "[", "Now", "]"}], ",", 
+      "\"\<. Game has ended\>\""}], "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Close", "@", "s"}]}], "Input",
+ CellChangeTimes->{{3.863277506744352*^9, 3.863277510322154*^9}, {
+  3.8632805062355895`*^9, 3.8632805489164453`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"a5bb3a5b-2b40-4dad-a4f2-503397b5506b"],
 
 Cell[BoxData["\<\"logs.txt\"\>"], "Output",
- CellChangeTimes->{3.86327756684064*^9},
- CellLabel->
-  "Out[199]=",ExpressionUUID->"87d2019b-9c25-4f51-affe-f9d3369df9a1"]
+ CellChangeTimes->{3.86327756684064*^9, 3.8632782298068027`*^9, 
+  3.8632785883681517`*^9, 3.8632787555086975`*^9, 3.8632790005412345`*^9, 
+  3.863279872102989*^9, 3.863279911679967*^9, 3.8632805496188784`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"9240c168-998a-48ea-a1a2-428c311b7c45"]
 }, Open  ]]
 }, Open  ]],
 
@@ -2510,50 +2603,52 @@ Cell[1046, 35, 194, 3, 74, "Section",ExpressionUUID->"1ea52c19-696a-4a7e-96b1-11
 Cell[1243, 40, 1463, 21, 63, "Text",ExpressionUUID->"c0d1d976-665f-4070-81b5-d72538dac7af"],
 Cell[2709, 63, 10695, 181, 466, "Input",ExpressionUUID->"febe46a5-c47d-47bf-880d-be5e83ba6158"],
 Cell[13407, 246, 1375, 37, 74, "Input",ExpressionUUID->"f37e6e32-6508-4ef4-a3a6-cd741f9cfd6e"],
+Cell[14785, 285, 271, 5, 31, "Input",ExpressionUUID->"3c0f6711-4424-43e5-8581-e20e7cf198e0"],
 Cell[CellGroupData[{
-Cell[14807, 287, 244, 4, 31, "Input",ExpressionUUID->"31b3dace-6aa8-4dae-af1c-32ec378ea4e1"],
-Cell[15054, 293, 19049, 353, 70, "Output",ExpressionUUID->"cdbbd788-3b39-4237-a783-9e71d009a204"]
+Cell[15081, 294, 347, 6, 31, "Input",ExpressionUUID->"31b3dace-6aa8-4dae-af1c-32ec378ea4e1"],
+Cell[15431, 302, 19303, 357, 70, "Output",ExpressionUUID->"f926b0c6-c18c-488f-944d-ef00a2b2e83c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34140, 651, 13313, 284, 555, "Input",ExpressionUUID->"e6d9d151-da09-47eb-b75b-6405d8a19a47"],
-Cell[47456, 937, 4314, 105, 462, "Output",ExpressionUUID->"4eb40a1d-f75c-4b39-aec8-9aae659a35de"]
+Cell[34771, 664, 15697, 335, 680, "Input",ExpressionUUID->"e6d9d151-da09-47eb-b75b-6405d8a19a47"],
+Cell[50471, 1001, 443, 10, 30, "Message",ExpressionUUID->"e6df996f-0161-42c9-8acf-5106915e9b93"],
+Cell[50917, 1013, 4885, 113, 462, "Output",ExpressionUUID->"04e4b8db-e657-4696-9986-86e3c94fec44"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[51807, 1047, 202, 4, 31, "Input",ExpressionUUID->"a5bb3a5b-2b40-4dad-a4f2-503397b5506b"],
-Cell[52012, 1053, 167, 3, 35, "Output",ExpressionUUID->"87d2019b-9c25-4f51-affe-f9d3369df9a1"]
+Cell[55839, 1131, 499, 12, 52, "Input",ExpressionUUID->"a5bb3a5b-2b40-4dad-a4f2-503397b5506b"],
+Cell[56341, 1145, 333, 4, 35, "Output",ExpressionUUID->"9240c168-998a-48ea-a1a2-428c311b7c45"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52228, 1062, 241, 4, 74, "Section",ExpressionUUID->"cd502f22-7ad8-439c-a305-060a95253674"],
-Cell[52472, 1068, 408, 6, 38, "Text",ExpressionUUID->"93f200eb-6d8e-4b4f-b6c3-b165837ddf0a"],
-Cell[52883, 1076, 2333, 37, 114, "Text",ExpressionUUID->"bac8980b-d688-4b57-b575-1a09894f784a"],
-Cell[55219, 1115, 2495, 35, 139, "Text",ExpressionUUID->"94995610-10ba-4853-87c2-784f159d7f33"],
+Cell[56723, 1155, 241, 4, 74, "Section",ExpressionUUID->"cd502f22-7ad8-439c-a305-060a95253674"],
+Cell[56967, 1161, 408, 6, 38, "Text",ExpressionUUID->"93f200eb-6d8e-4b4f-b6c3-b165837ddf0a"],
+Cell[57378, 1169, 2333, 37, 114, "Text",ExpressionUUID->"bac8980b-d688-4b57-b575-1a09894f784a"],
+Cell[59714, 1208, 2495, 35, 139, "Text",ExpressionUUID->"94995610-10ba-4853-87c2-784f159d7f33"],
 Cell[CellGroupData[{
-Cell[57739, 1154, 252, 4, 31, "Input",ExpressionUUID->"27d029a4-1ffe-48b7-b635-37a229ef6e6c"],
-Cell[57994, 1160, 189, 2, 35, "Output",ExpressionUUID->"19673d95-f1ae-42d5-88a6-fd0a56b439ef"]
+Cell[62234, 1247, 252, 4, 31, "Input",ExpressionUUID->"27d029a4-1ffe-48b7-b635-37a229ef6e6c"],
+Cell[62489, 1253, 189, 2, 35, "Output",ExpressionUUID->"19673d95-f1ae-42d5-88a6-fd0a56b439ef"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[58220, 1167, 665, 10, 31, "Input",ExpressionUUID->"7814502d-3fd2-49a5-9d6b-36814e9780fc"],
-Cell[58888, 1179, 492, 7, 35, "Output",ExpressionUUID->"ed7bb2fb-4c79-45f2-9bbe-7bbc0007d496"]
+Cell[62715, 1260, 665, 10, 31, "Input",ExpressionUUID->"7814502d-3fd2-49a5-9d6b-36814e9780fc"],
+Cell[63383, 1272, 492, 7, 35, "Output",ExpressionUUID->"ed7bb2fb-4c79-45f2-9bbe-7bbc0007d496"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[59417, 1191, 540, 8, 31, "Input",ExpressionUUID->"22ee0eda-3817-4ea0-8cb2-8ed914446906"],
-Cell[59960, 1201, 525, 7, 35, "Output",ExpressionUUID->"56d03799-3660-40d2-8b84-8134ebbb4ea1"]
+Cell[63912, 1284, 540, 8, 31, "Input",ExpressionUUID->"22ee0eda-3817-4ea0-8cb2-8ed914446906"],
+Cell[64455, 1294, 525, 7, 35, "Output",ExpressionUUID->"56d03799-3660-40d2-8b84-8134ebbb4ea1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[60522, 1213, 308, 5, 31, "Input",ExpressionUUID->"47e35ef9-8d8e-4189-9a88-b2ac80ede48b"],
-Cell[60833, 1220, 200, 3, 35, "Output",ExpressionUUID->"cc69ff62-637a-42a3-89e8-11b47f8a5290"]
+Cell[65017, 1306, 308, 5, 31, "Input",ExpressionUUID->"47e35ef9-8d8e-4189-9a88-b2ac80ede48b"],
+Cell[65328, 1313, 200, 3, 35, "Output",ExpressionUUID->"cc69ff62-637a-42a3-89e8-11b47f8a5290"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[61082, 1229, 194, 3, 73, "Section",ExpressionUUID->"5d4e0150-4595-477b-8416-1e140e7b65b5"],
-Cell[61279, 1234, 2689, 42, 139, "Text",ExpressionUUID->"149cd2c7-0134-4e1f-9b53-bd2b47d5dee2"],
-Cell[63971, 1278, 33965, 562, 325, "Input",ExpressionUUID->"92780d2e-ab9b-4168-b800-1070556f2a22"]
+Cell[65577, 1322, 194, 3, 73, "Section",ExpressionUUID->"5d4e0150-4595-477b-8416-1e140e7b65b5"],
+Cell[65774, 1327, 2689, 42, 139, "Text",ExpressionUUID->"149cd2c7-0134-4e1f-9b53-bd2b47d5dee2"],
+Cell[68466, 1371, 33965, 562, 325, "Input",ExpressionUUID->"92780d2e-ab9b-4168-b800-1070556f2a22"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[97973, 1845, 243, 4, 73, "Section",ExpressionUUID->"b72efc40-f84e-41d8-b97e-7161c2b03299"],
-Cell[98219, 1851, 2020, 29, 89, "Text",ExpressionUUID->"09abe3b8-9948-4157-b981-516b6cba1042"],
-Cell[100242, 1882, 34365, 570, 434, "Input",ExpressionUUID->"46964f0f-4b69-4d01-b7d8-32acd70db177"]
+Cell[102468, 1938, 243, 4, 73, "Section",ExpressionUUID->"b72efc40-f84e-41d8-b97e-7161c2b03299"],
+Cell[102714, 1944, 2020, 29, 89, "Text",ExpressionUUID->"09abe3b8-9948-4157-b981-516b6cba1042"],
+Cell[104737, 1975, 34365, 570, 434, "Input",ExpressionUUID->"46964f0f-4b69-4d01-b7d8-32acd70db177"]
 }, Open  ]]
 }, Open  ]]
 }
