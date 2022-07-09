@@ -1,0 +1,24 @@
+Sat 4 Jun 2022 00:22:01 Game has started
+One step right
+One step left
+One step left
+One step left
+One step left
+One step left
+One step left
+One step up
+One step up
+One step up
+One step up
+One step up
+One step up
+One step up
+One step left
+One step left
+One step left
+One step left
+One step left
+One step left
+One step left
+Game over
+Sat 4 Jun 2022 00:29:09. Game has ended
